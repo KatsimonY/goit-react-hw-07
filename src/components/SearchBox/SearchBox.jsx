@@ -1,13 +1,13 @@
 import { useId } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { getFilter, changeFilter } from "../../redux/filtersSlice";
+import { selectFilter, changeFilter } from "../../redux/filtersSlice";
 import css from "./SearchBox.module.css";
 import { HiSearch } from "react-icons/hi";
 
 export const SearchBox = () => {
   const searchId = useId();
   const dispatch = useDispatch();
-  const filter = useSelector(getFilter);
+  const filter = useSelector(selectFilter);
 
   return (
     <div className={css.wrapper}>
